@@ -4,6 +4,7 @@
 #include <algorithm>
 #include <functional>
 #include <string>
+using namespace std;
 
 int main(void)
 {
