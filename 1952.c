@@ -30,7 +30,7 @@
 //		return;
 //	}
 //	else{
-//		//´ÙÁß Àç±Í
+//		//ë‹¤ì¤‘ ì¬ê·€
 //		//for (int k = start; k <= 12; k++)
 //		//if (plan[k] != 0)
 //		//{
@@ -40,7 +40,7 @@
 //			if (plan[k] != 0)
 //			{*/
 //
-//			//if (flag==0 && i == 0){//1³â±Ç »ç¿ë
+//			//if (flag==0 && i == 0){//1ë…„ê¶Œ ì‚¬ìš©
 //			//	now_price = toll[3];
 //			//	int temp[13];
 //			//	for (int j = 1; j <= 12; j++){
@@ -53,7 +53,7 @@
 //			//		plan[j] = temp[j];
 //			//}
 //
-//			if (i == 1){//1ÀÏ±Ç »ç¿ë
+//			if (i == 1){//1ì¼ê¶Œ ì‚¬ìš©
 //				for (int j = start; j <= 12; j++){
 //					if (now_price + plan[j] * toll[0]<ans && plan[j] != 0){
 //						temp_price = now_price;
@@ -67,7 +67,7 @@
 //					}
 //				}
 //			}
-//			else if (i == 2){//1´Ş±Ç »ç¿ë
+//			else if (i == 2){//1ë‹¬ê¶Œ ì‚¬ìš©
 //				for (int j = start; j <= 12; j++){
 //					if (now_price + toll[1] <ans && (plan[j] != 0)){
 //						temp_price = now_price;
@@ -81,7 +81,7 @@
 //					}
 //				}
 //			}
-//			else if (i == 3){//3´Ş±Ç »ç¿ë
+//			else if (i == 3){//3ë‹¬ê¶Œ ì‚¬ìš©
 //				for (int j = start; j <= 12; j++){
 //					if (now_price + toll[2]<ans && plan[j] != 0){
 //						temp_price = now_price;
@@ -123,20 +123,20 @@
 //
 //	for (int testcase = 1; testcase <= T; ++testcase)
 //	{
-//		//ÀÔ·ÂºÎ
+//		//ì…ë ¥ë¶€
 //		for (int i = 0; i < 4; i++)
 //			scanf("%d", &toll[i]);
 //		for (int i = 1; i <= MAXMONTH; i++)
 //			scanf("%d", &plan[i]);
 //
-//		//¿¬»êºÎ
+//		//ì—°ì‚°ë¶€
 //		now_price = 0;
 //		ans = toll[3];
 //
 //		DFS(0, plan);
 //
 //
-//		//Ãâ·ÂºÎ
+//		//ì¶œë ¥ë¶€
 //
 //		printf("#%d %d\n", testcase, ans);
 //
@@ -192,7 +192,7 @@
 //		return;
 //	}
 //	else{
-//		//´ÙÁß Àç±Í
+//		//ë‹¤ì¤‘ ì¬ê·€
 //		//for (int k = start; k <= 12; k++)
 //			//if (plan[k] != 0)
 //			//{
@@ -202,7 +202,7 @@
 //					if (plan[k] != 0)
 //					{*/
 //
-//					//if (flag==0 && i == 0){//1³â±Ç »ç¿ë
+//					//if (flag==0 && i == 0){//1ë…„ê¶Œ ì‚¬ìš©
 //					//	now_price = toll[3];
 //					//	int temp[13];
 //					//	for (int j = 1; j <= 12; j++){
@@ -215,7 +215,7 @@
 //					//		plan[j] = temp[j];
 //					//}
 //
-//					if (i == 1){//1ÀÏ±Ç »ç¿ë
+//					if (i == 1){//1ì¼ê¶Œ ì‚¬ìš©
 //						flag = 1;
 //						for (int j = start; j <= 12; j++){
 //							if (now_price + plan[j] * toll[0]<ans && plan[j] != 0){
@@ -231,7 +231,7 @@
 //							}
 //						}
 //					}
-//					else if (i == 2){//1´Ş±Ç »ç¿ë
+//					else if (i == 2){//1ë‹¬ê¶Œ ì‚¬ìš©
 //						flag = 2;
 //						for (int j = start; j <= 12; j++){
 //							if (now_price + toll[1] <ans && (plan[j] != 0)){
@@ -247,7 +247,7 @@
 //							}
 //						}
 //					}
-//					else if (i == 3){//3´Ş±Ç »ç¿ë
+//					else if (i == 3){//3ë‹¬ê¶Œ ì‚¬ìš©
 //						flag = 3;
 //						for (int j = start; j <= 12; j++){
 //							if (now_price + toll[2]<ans && plan[j] != 0){
@@ -289,20 +289,20 @@
 //
 //	for (int testcase = 1; testcase <= T; ++testcase)
 //	{
-//		//ÀÔ·ÂºÎ
+//		//ì…ë ¥ë¶€
 //		for (int i = 0; i < 4; i++)
 //			scanf("%d", &toll[i]);
 //		for (int i = 1; i <= MAXMONTH; i++)
 //			scanf("%d", &plan[i]);
 //
-//		//¿¬»êºÎ
+//		//ì—°ì‚°ë¶€
 //		now_price = 0;
 //		ans = toll[3];
 //		flag= 1;
 //		DFS(0, plan,flag);
 //
 //
-//		//Ãâ·ÂºÎ
+//		//ì¶œë ¥ë¶€
 //
 //		printf("#%d %d\n", testcase,ans);
 //
@@ -312,7 +312,7 @@
 //	return 0;
 //}
 
-//DP½Ãµµ
+//DPì‹œë„
 #include <stdio.h>
 #define min(a,b) a<b?a:b
 #define MAXMONTH 12
@@ -325,17 +325,17 @@ int ans;
 
 void solve(){
 	
-	DP[12] = toll[3];//1³â±Ç°ú ºñ±³
+	DP[12] = toll[3];//1ë…„ê¶Œê³¼ ë¹„êµ
 	DP[1] = min(plan[1] * toll[0], toll[1]);
 	DP[1] = min(DP[1], toll[2]);
 	DP[3] = toll[2];
 
 	for (int i = 2; i <= MAXMONTH; i++){
 		for (int j = 0; j < 2; j++){
-			if (j == 0){//1ÀÏ±Çvs1´Ş±Ç				
+			if (j == 0){//1ì¼ê¶Œvs1ë‹¬ê¶Œ				
 				DP[i] = min(DP[i - 1] + plan[i] * toll[0], DP[i-1]+toll[1]);				
 			}
-			else if (j == 1 && i>=3){//3´Ş±ÇvsÀÌÀü°ª
+			else if (j == 1 && i>=3){//3ë‹¬ê¶Œvsì´ì „ê°’
 				DP[i] = min(DP[i], DP[i - 3] + toll[2]);
 				if (i == 12) DP[i] = min(DP[i], toll[3]);
 			}
@@ -353,19 +353,19 @@ int main(void)
 
 	for (int testcase = 1; testcase <= T; ++testcase)
 	{
-		//ÀÔ·ÂºÎ
+		//ì…ë ¥ë¶€
 		for (int i = 0; i < 4; i++)
 			scanf("%d", &toll[i]);
 		for (int i = 1; i <= MAXMONTH; i++)
 			scanf("%d", &plan[i]);
 		
-		//¿¬»êºÎ
+		//ì—°ì‚°ë¶€
 		for (int i = 1; i <= 12; i++)
 			DP[i] = 0;
 		solve();
 		ans = DP[12];
 
-		//Ãâ·ÂºÎ
+		//ì¶œë ¥ë¶€
 		printf("#%d %d\n", testcase, ans);
 	}
 	return 0;
