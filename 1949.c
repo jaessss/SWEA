@@ -5,7 +5,7 @@
 int ans;
 int N, K;
 int map[MAXN][MAXN];
-int dr[4] = { -1, 1, 0, 0 };//»óÇÏÁÂ¿ì
+int dr[4] = { -1, 1, 0, 0 };//ìƒí•˜ì¢Œìš°
 int dc[4] = { 0, 0, -1, 1 };
 typedef struct{
 	int r, c, h, cnt;
@@ -37,7 +37,7 @@ void BFS(int map[][MAXN], NODE start){
 					queue[wpq++] = insert;
 				}				
 			}
-			else if (i == 3)//ÁøÇàºÒ°¡ -> Á¾·áÁ¶°Ç
+			else if (i == 3)//ì§„í–‰ë¶ˆê°€ -> ì¢…ë£Œì¡°ê±´
 				ans = MAX(ans, temp.cnt);			
 		}
 	}
@@ -59,7 +59,7 @@ int main(void)
 				scanf("%d", &map[i][j]);
 
 		ans = mrp = mwp = maxbongvalue = 0;
-		//¸Æ½ººÀ¿ì¸® Ã£¾Æ¼­ ¸Æ½ººÀÅ¥¿¡ ÀúÀå
+		//ë§¥ìŠ¤ë´‰ìš°ë¦¬ ì°¾ì•„ì„œ ë§¥ìŠ¤ë´‰íì— ì €ì¥
 		for (int i = 1; i <= N; i++)
 			for (int j = 1; j <= N; j++)
 				maxbongvalue = MAX(maxbongvalue, map[i][j]);
@@ -73,7 +73,7 @@ int main(void)
 					temp.cnt = 1;
 					maxbong[mwp++] = temp;					
 				}
-		//¸ÊÀüÃ¼, k°ª, ¸Æ½ººÀstartÀ§Ä¡·Î BFSÈ£Ãâ
+		//ë§µì „ì²´, kê°’, ë§¥ìŠ¤ë´‰startìœ„ì¹˜ë¡œ BFSí˜¸ì¶œ
 		for (int i = 1; i <= N; i++)
 			for (int j = 1; j <= N; j++)
 				for (int k = 1; k <= K; k++){
