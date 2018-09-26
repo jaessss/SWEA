@@ -1,6 +1,6 @@
 
 //flag 211122
-//°¡·Î¼¼·Î ÇÑÁÙ¿¡ ´ëÇÑ Á¤º¸¸¦ ÀÓ½Ã¹è¿­¿¡ ÀúÀåÇÏ°í ÀÎÀÚ·Î ³Ñ°Ü ÆÇ´ÜÇÏµµ·Ï
+//ê°€ë¡œì„¸ë¡œ í•œì¤„ì— ëŒ€í•œ ì •ë³´ë¥¼ ì„ì‹œë°°ì—´ì— ì €ì¥í•˜ê³  ì¸ìë¡œ ë„˜ê²¨ íŒë‹¨í•˜ë„ë¡
 #include <stdio.h>
 #define MAXN 20+1
 
@@ -10,7 +10,7 @@ int ans;
 
 int downcheck(int now_order, int now_index, int nowh, int flag){
 	
-	if (flag == 0){//°¡·Î
+	if (flag == 0){//ê°€ë¡œ
 		if (now_index + X-1 <= N){
 			for (int i = 0; i < X; i++){
 				if (nowh == map[now_order][now_index + i]) continue;
@@ -20,7 +20,7 @@ int downcheck(int now_order, int now_index, int nowh, int flag){
 		}
 		else return 0;
 	}
-	else if (flag == 1){//¼¼·Î
+	else if (flag == 1){//ì„¸ë¡œ
 		if (now_index + X-1 <= N){
 			for (int i = 0; i < X; i++){
 				if (nowh == map[now_index + i][now_order]) continue;
@@ -39,16 +39,16 @@ int solve(){
 	int nowh;	
 	int flag = 0;
 
-	//°¡·ÎÅ½»ö
+	//ê°€ë¡œíƒìƒ‰
 	upcnt = cnt = nowh = 0;
-	for (int i = 1; i <= N; i++){//°¡·Î¶óÀÎµé Å½»ö
+	for (int i = 1; i <= N; i++){//ê°€ë¡œë¼ì¸ë“¤ íƒìƒ‰
 		nowh = map[i][1];
 		upcnt = flag = 0;
-		for (int j = 1; j <= N-1; j++){//ÇÏ³ªÀÇ ¶óÀÎ¿¡ ´ëÇÑ °Ë»ç
+		for (int j = 1; j <= N-1; j++){//í•˜ë‚˜ì˜ ë¼ì¸ì— ëŒ€í•œ ê²€ì‚¬
 			if (map[i][j + 1] == nowh){
 				  upcnt++;
 				  if (j == N - 1) cnt++;
-				  if (flag == 1)upcnt--;//////////////////////////211122°°Àº °æ¿ì °æ»ç·Î ¼³Ä¡¿©ºÎ È®½ÇÈ÷ ¹®Á¦¿¹½Ã¿¡¼­µµ ÈùÆ®
+				  if (flag == 1)upcnt--;//////////////////////////211122ê°™ì€ ê²½ìš° ê²½ì‚¬ë¡œ ì„¤ì¹˜ì—¬ë¶€ í™•ì‹¤íˆ ë¬¸ì œì˜ˆì‹œì—ì„œë„ íŒíŠ¸
 				  flag = 0;
 			}
 			else if (map[i][j + 1] > nowh){
@@ -66,14 +66,14 @@ int solve(){
 					if (j == N - 1) cnt++;
 					nowh--;
 					upcnt = 0;
-					flag = 1;//°æ»ç·Î ¼³Ä¡Ç¥½Ã
+					flag = 1;//ê²½ì‚¬ë¡œ ì„¤ì¹˜í‘œì‹œ
 				}
 				else break;
 			}
 		}
 	}
 	
-	//¼¼·ÎÅ½»ö
+	//ì„¸ë¡œíƒìƒ‰
 	upcnt = nowh = 0;
 	for (int i = 1; i <= N; i++){
 		nowh = map[1][i];
@@ -144,7 +144,7 @@ int main(void)
 //
 //int downcheck(int now_order, int now_index, int nowh, int flag){
 //
-//	if (flag == 0){//°¡·Î
+//	if (flag == 0){//ê°€ë¡œ
 //		if (now_index + X - 1 <= N){
 //			for (int i = 0; i < X; i++){
 //				if (nowh == map[now_order][now_index + i]) continue;
@@ -154,7 +154,7 @@ int main(void)
 //		}
 //		else return 0;
 //	}
-//	else if (flag == 1){//¼¼·Î
+//	else if (flag == 1){//ì„¸ë¡œ
 //		if (now_index + X - 1 <= N){
 //			for (int i = 0; i < X; i++){
 //				if (nowh == map[now_index + i][now_order]) continue;
@@ -174,12 +174,12 @@ int main(void)
 //	int cnt;
 //	int nowh;
 //
-//	//°¡·ÎÅ½»ö
+//	//ê°€ë¡œíƒìƒ‰
 //	upcnt = cnt = nowh = 0;
-//	for (int i = 1; i <= N; i++){//°¡·Î¶óÀÎµé Å½»ö
+//	for (int i = 1; i <= N; i++){//ê°€ë¡œë¼ì¸ë“¤ íƒìƒ‰
 //		nowh = map[i][1];
 //		upcnt = 0;
-//		for (int j = 1; j <= N - 1; j++){//ÇÏ³ªÀÇ ¶óÀÎ¿¡ ´ëÇÑ °Ë»ç
+//		for (int j = 1; j <= N - 1; j++){//í•˜ë‚˜ì˜ ë¼ì¸ì— ëŒ€í•œ ê²€ì‚¬
 //			if (map[i][j + 1] == nowh){
 //				upcnt++;
 //				if (j == N - 1) cnt++;
@@ -204,7 +204,7 @@ int main(void)
 //		}
 //	}
 //
-//	//¼¼·ÎÅ½»ö
+//	//ì„¸ë¡œíƒìƒ‰
 //	upcnt = nowh = 0;
 //	for (int i = 1; i <= N; i++){
 //		nowh = map[1][i];
