@@ -28,8 +28,8 @@ typedef struct{
 
 STEP step[2];
 int stepwp;
-QUEUE ready;//»ç¶÷Á¤º¸ÀúÀå
-QUEUE stepA;//°è´ÜAÀÌ¿ëÀÚ Á¤º¸
+QUEUE ready;//ì‚¬ëŒì •ë³´ì €ì¥
+QUEUE stepA;//ê³„ë‹¨Aì´ìš©ì ì •ë³´
 QUEUE stepB;//
 
 void init(){
@@ -41,17 +41,17 @@ void init(){
 void solve(){
 	ans = INF;
 	int num;
-	//rpwpÃÊ±âÈ­
+	//rpwpì´ˆê¸°í™”
 	ready.rp = ready.wp = stepwp = 0;
 	for (int i = 1; i <= N; i++)
 		for (int j = 1; j <= N; j++){
-			if (map[i][j] == 1){//»ç¶÷ À§Ä¡ ÆÇ´Ü
+			if (map[i][j] == 1){//ì‚¬ëŒ ìœ„ì¹˜ íŒë‹¨
 				PERSON temp;
 				temp.r = i;
 				temp.c = j;
 				ready.array[ready.wp++] = temp;
 			}
-			else if (map[i][j] > 1){//°è´Ü 2°³ À§Ä¡ ÆÇ´Ü
+			else if (map[i][j] > 1){//ê³„ë‹¨ 2ê°œ ìœ„ì¹˜ íŒë‹¨
 				STEP temp;
 				temp.r = i;
 				temp.c = j;
@@ -60,19 +60,19 @@ void solve(){
 			}
 			else continue;
 		}
-	num = ready.wp;//»ç¶÷¼ö
+	num = ready.wp;//ì‚¬ëŒìˆ˜
 
-	//ÁøÇà
+	//ì§„í–‰
 	for (int i = 0; i <= ((1 << (num)) - 1); i++){
-		init();//°¢ °æ¿ìÀÇ ¼ö¸¶´Ù ÃÊ±âÈ­
-		for (int j = 0; j < num; j++){//°è´Ü ºĞ¹è
-			if (i & (1 << j)){//A°è´Ü
+		init();//ê° ê²½ìš°ì˜ ìˆ˜ë§ˆë‹¤ ì´ˆê¸°í™”
+		for (int j = 0; j < num; j++){//ê³„ë‹¨ ë¶„ë°°
+			if (i & (1 << j)){//Aê³„ë‹¨
 				ready.array[j].step = 1;
 				int disr = ABS(ready.array[j].r, step[0].r);
 				int disc = ABS(ready.array[j].c, step[0].c);
 				ready.array[j].distanc = disr + disc;
 			}
-			else{//B°è´Ü
+			else{//Bê³„ë‹¨
 				ready.array[j].step = 2;
 				int disr = ABS(ready.array[j].r, step[1].r);
 				int disc = ABS(ready.array[j].c, step[1].c);
@@ -80,11 +80,11 @@ void solve(){
 			}
 		}
 
-		while (stepA.rp + stepB.rp < num){//Á¾·áÁ¶°Ç
-			//°è´Ü ÀÔ±¸ µµÂø È®ÀÎ
+		while (stepA.rp + stepB.rp < num){//ì¢…ë£Œì¡°ê±´
+			//ê³„ë‹¨ ì…êµ¬ ë„ì°© í™•ì¸
 			for (int i = 0; i < num; i++)
-				if (ready.array[i].distanc == 0){//°è´Ü ÀÔ±¸ µµÂøÇßÀ¸¸é
-					if ((ready.array[i].step == 1) && (stepA.wp - stepA.rp < 3)){//°è´Ü À§ 3 ¸í ÆÇ´ÜÇÏ´Â rp,wp
+				if (ready.array[i].distanc == 0){//ê³„ë‹¨ ì…êµ¬ ë„ì°©í–ˆìœ¼ë©´
+					if ((ready.array[i].step == 1) && (stepA.wp - stepA.rp < 3)){//ê³„ë‹¨ ìœ„ 3 ëª… íŒë‹¨í•˜ëŠ” rp,wp
 						ready.array[i].remain = step[0].value;
 						stepA.array[stepA.wp++] = ready.array[i];
 						ready.array[i].distanc = -1;
@@ -98,12 +98,12 @@ void solve(){
 
 
 			time++;
-			//½Ã°£ °æ°ú¿¡ µû¸¥ ³²Àº ÀÌµ¿ ½Ã°£ °¨¼Ò
-			//°è´Ü±îÁö
+			//ì‹œê°„ ê²½ê³¼ì— ë”°ë¥¸ ë‚¨ì€ ì´ë™ ì‹œê°„ ê°ì†Œ
+			//ê³„ë‹¨ê¹Œì§€
 			for (int i = 0; i < num; i++){
 				if (ready.array[i].distanc > 0) ready.array[i].distanc--;
 			}
-			//°è´Ü À§
+			//ê³„ë‹¨ ìœ„
 			for (int i = stepA.rp; i < stepA.wp; i++)
 				if (--(stepA.array[i].remain) == 0) stepA.rp++;
 			for (int i = stepB.rp; i < stepB.wp; i++)
