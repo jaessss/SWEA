@@ -5,7 +5,7 @@
 long long N;
 int M;
 int select[MAXM];
-//0น๘บฮลอ M-1น๘ ป๓วฐ
+//0ยนรธยบรร…ร M-1ยนรธ ยปรณรยฐ
 typedef struct{
 	long long price;
 	int good;
