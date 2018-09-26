@@ -1,5 +1,5 @@
 ////49/50
-////A B ÅõÀÔ¼ø¼­ ¸ğµÎ °í·Á ÇÒ ¼ö ÀÖ°Ô
+////A B íˆ¬ì…ìˆœì„œ ëª¨ë‘ ê³ ë ¤ í•  ìˆ˜ ìˆê²Œ
 //#include <stdio.h>
 //#define min(a,b) (a>b)?(b):(a)
 //#define INF 0xffff
@@ -44,10 +44,10 @@
 //	if (check(map, ttry, flag) == 1) return;
 //	else if (ttry == D) return;
 //	else{
-//		//ÅõÀÔ¼ø¼­ °í·Á 
+//		//íˆ¬ì…ìˆœì„œ ê³ ë ¤ 
 //		//for (int k = 0; k <= 1; k++){
 //			if (flag == 0){
-//				//AÅõÀÔ
+//				//Aíˆ¬ì…
 //				for (int i = 1; i <= D; i++){
 //					if (!(ttryRow & (1 << i))){
 //						int temp[MAXW];
@@ -61,7 +61,7 @@
 //							map[i][j] = temp[j];
 //					}
 //				}
-//				//BÅõÀÔ
+//				//Bíˆ¬ì…
 //				for (int i = 1; i <= D; i++){
 //					if (!(ttryRow & (1 << i))){
 //						int temp[MAXW];
@@ -77,7 +77,7 @@
 //				}
 //			}
 //			if (flag == 1){
-//				//BÅõÀÔ
+//				//Bíˆ¬ì…
 //				for (int i = 1; i <= D; i++){
 //					if (!(ttryRow & (1 << i))){
 //						int temp[MAXW];
@@ -91,7 +91,7 @@
 //							map[i][j] = temp[j];
 //					}
 //				}
-//				//AÅõÀÔ
+//				//Aíˆ¬ì…
 //				for (int i = 1; i <= D; i++){
 //					if (!(ttryRow & (1 << i))){
 //						int temp[MAXW];
@@ -120,7 +120,7 @@
 //
 //	for (int testcase = 1; testcase <= T; ++testcase)
 //	{
-//		//ÀÔ·ÂºÎ
+//		//ì…ë ¥ë¶€
 //		scanf("%d %d %d", &D, &W, &K);
 //		for (int i = 1; i <= D; i++)
 //			for (int j = 1; j <= W; j++)
@@ -143,7 +143,7 @@
 
 
 //
-////A B ÅõÀÔ¼ø¼­ ¸ğµÎ °í·Á ÇÒ ¼ö ÀÖ°Ô
+////A B íˆ¬ì…ìˆœì„œ ëª¨ë‘ ê³ ë ¤ í•  ìˆ˜ ìˆê²Œ
 //#include <stdio.h>
 //#define min(a,b) (a>b)?(b):(a)
 //#define INF 0xffff
@@ -189,11 +189,11 @@
 //	if (check(map, ttry) == 1) return;
 //	else if (ttry == D) return;
 //	else{
-//		//ÅõÀÔ¼ø¼­ °í·Á 
+//		//íˆ¬ì…ìˆœì„œ ê³ ë ¤ 
 //		for (int k = 0; k <= 1; k++){
 //			//if (flag == 0){
 //			if (k == 0){
-//				//AÅõÀÔ
+//				//Aíˆ¬ì…
 //				for (int i = 1; i <= D; i++){
 //					if (!(ttryRow & (1 << i))){
 //						int temp[MAXW];
@@ -207,7 +207,7 @@
 //							map[i][j] = temp[j];
 //					}
 //				}
-//				//BÅõÀÔ
+//				//Bíˆ¬ì…
 //				for (int i = 1; i <= D; i++){
 //					if (!(ttryRow & (1 << i))){
 //						int temp[MAXW];
@@ -226,7 +226,7 @@
 //			//}
 //			//if (flag == 1){
 //			if (k == 1){
-//				//BÅõÀÔ
+//				//Bíˆ¬ì…
 //				for (int i = 1; i <= D; i++){
 //					if (!(ttryRow & (1 << i))){
 //						int temp[MAXW];
@@ -240,7 +240,7 @@
 //							map[i][j] = temp[j];
 //					}
 //				}
-//				//AÅõÀÔ
+//				//Aíˆ¬ì…
 //				for (int i = 1; i <= D; i++){
 //					if (!(ttryRow & (1 << i))){
 //						int temp[MAXW];
@@ -271,7 +271,7 @@
 //
 //	for (int testcase = 1; testcase <= T; ++testcase)
 //	{
-//		//ÀÔ·ÂºÎ
+//		//ì…ë ¥ë¶€
 //		scanf("%d %d %d", &D, &W, &K);
 //		for (int i = 1; i <= D; i++)
 //			for (int j = 1; j <= W; j++)
@@ -292,8 +292,8 @@
 
 
 //
-////½Ã°£ÃÊ°ú 47/50
-////A B ÅõÀÔ¼ø¼­ ¸ğµÎ °í·Á ÇÒ ¼ö ÀÖ°Ô
+////ì‹œê°„ì´ˆê³¼ 47/50
+////A B íˆ¬ì…ìˆœì„œ ëª¨ë‘ ê³ ë ¤ í•  ìˆ˜ ìˆê²Œ
 //#include <stdio.h>
 //#define min(a,b) (a>b)?(b):(a)
 //#define INF 0xffff
@@ -342,10 +342,10 @@
 //		if (check(map, ttry, flag) == 1) return;
 //		//else if (ttry == D) return;
 //		else{
-//			//ÅõÀÔ¼ø¼­ °í·Á 
+//			//íˆ¬ì…ìˆœì„œ ê³ ë ¤ 
 //			//for (int k = 0; k <= 1; k++){
 //			if (flag == 0){
-//				//AÅõÀÔ
+//				//Aíˆ¬ì…
 //				for (int i = 1; i <= D; i++){
 //					if (!(ttryRow & (1 << i))){
 //						int temp[MAXW];
@@ -360,7 +360,7 @@
 //							map[i][j] = temp[j];
 //					}
 //				}
-//				//BÅõÀÔ
+//				//Bíˆ¬ì…
 //				for (int i = 1; i <= D; i++){
 //					if (!(ttryRow & (1 << i))){
 //						int temp[MAXW];
@@ -377,7 +377,7 @@
 //				}
 //			}
 //			if (flag == 1){
-//				//BÅõÀÔ
+//				//Bíˆ¬ì…
 //				for (int i = 1; i <= D; i++){
 //					if (!(ttryRow & (1 << i))){
 //						int temp[MAXW];
@@ -392,7 +392,7 @@
 //							map[i][j] = temp[j];
 //					}
 //				}
-//				//AÅõÀÔ
+//				//Aíˆ¬ì…
 //				for (int i = 1; i <= D; i++){
 //					if (!(ttryRow & (1 << i))){
 //						int temp[MAXW];
@@ -425,7 +425,7 @@
 //
 //	for (int testcase = 1; testcase <= T; ++testcase)
 //	{
-//		//ÀÔ·ÂºÎ
+//		//ì…ë ¥ë¶€
 //		scanf("%d %d %d", &D, &W, &K);
 //		for (int i = 1; i <= D; i++)
 //			for (int j = 1; j <= W; j++)
@@ -500,7 +500,7 @@
 //	if (check(map, ttry, flag) == 1) return;
 //	if (ans > ttry+1){
 //			//if (flag == 0){
-//				//AÅõÀÔ
+//				//Aíˆ¬ì…
 //		for (int i = search; i <= D; i++){
 //					if (!(ttryRow & (1 << i))){
 //						//for (int j = 0; j < 2; j++){
@@ -532,7 +532,7 @@
 //				}
 //			//}
 //			//if (flag == 1){
-//			//	//BÅõÀÔ
+//			//	//Bíˆ¬ì…
 //			//	for (int i = 1; i <= D; i++){
 //			//		if (!(ttryRow & (1 << i))){		
 //			//			//for (int j = 0; j < 2; j++){
@@ -567,7 +567,7 @@
 //
 //	for (int testcase = 1; testcase <= T; ++testcase)
 //	{
-//		//ÀÔ·ÂºÎ
+//		//ì…ë ¥ë¶€
 //		scanf("%d %d %d", &D, &W, &K);
 //		for (int i = 1; i <= D; i++)
 //			for (int j = 1; j <= W; j++)
@@ -634,18 +634,18 @@
 //				ttryRow |= (1 << i);
 //				for (int j = 1; j <= W; j++){
 //					temp[j] = map[i][j];
-//					map[i][j] = ABrow[0][j];//A¾àÇ° ÅõÀÔÁØºñ
+//					map[i][j] = ABrow[0][j];//Aì•½í’ˆ íˆ¬ì…ì¤€ë¹„
 //				}
 //				DFS(map, ttry + 1, ttryRow, search + 1);
 //
 //				for (int j = 1; j <= W; j++){
-//					map[i][j] = ABrow[1][j];//B¾àÇ° ÅõÀÔÁØºñ
+//					map[i][j] = ABrow[1][j];//Bì•½í’ˆ íˆ¬ì…ì¤€ë¹„
 //				}
 //				DFS(map, ttry + 1, ttryRow, search + 1);
 //
 //				for (int j = 1; j <= W; j++)
-//					map[i][j] = temp[j];//¿ø»óº¹±¸
-//				DFS(map, ttry, ttryRow, search + 1); //ÅõÀÔx ´ÙÀ½ rowÈ®ÀÎ
+//					map[i][j] = temp[j];//ì›ìƒë³µêµ¬
+//				DFS(map, ttry, ttryRow, search + 1); //íˆ¬ì…x ë‹¤ìŒ rowí™•ì¸
 //			}
 //		}	
 //	}
@@ -662,7 +662,7 @@
 //
 //	for (int testcase = 1; testcase <= T; ++testcase)
 //	{
-//		//ÀÔ·ÂºÎ
+//		//ì…ë ¥ë¶€
 //		scanf("%d %d %d", &D, &W, &K);
 //		for (int i = 1; i <= D; i++)
 //			for (int j = 1; j <= W; j++)
@@ -683,7 +683,7 @@
 
 
 //8:23
-//49°³
+//49ê°œ
 //#include <stdio.h>
 //#define min(a,b) (a>b)?(b):(a)
 //#define INF 0xffff
@@ -728,18 +728,18 @@
 //			ttryRow |= (1 << search);
 //			for (int j = 1; j <= W; j++){
 //				temp[j] = map[search][j];
-//				map[search][j] = ABrow[0][j];//A¾àÇ° ÅõÀÔÁØºñ
+//				map[search][j] = ABrow[0][j];//Aì•½í’ˆ íˆ¬ì…ì¤€ë¹„
 //			}
 //			DFS(map, ttry + 1, ttryRow, search + 1);
 //
 //			for (int j = 1; j <= W; j++){
-//				map[search][j] = ABrow[1][j];//B¾àÇ° ÅõÀÔÁØºñ
+//				map[search][j] = ABrow[1][j];//Bì•½í’ˆ íˆ¬ì…ì¤€ë¹„
 //			}
 //			DFS(map, ttry + 1, ttryRow, search + 1);
 //
 //			for (int j = 1; j <= W; j++)
-//				map[search][j] = temp[j];//¿ø»óº¹±¸
-//			DFS(map, ttry, ttryRow, search + 1); //ÅõÀÔx ´ÙÀ½ rowÈ®ÀÎ
+//				map[search][j] = temp[j];//ì›ìƒë³µêµ¬
+//			DFS(map, ttry, ttryRow, search + 1); //íˆ¬ì…x ë‹¤ìŒ rowí™•ì¸
 //		}
 //	}
 //	else return;
@@ -755,7 +755,7 @@
 //
 //	for (int testcase = 1; testcase <= T; ++testcase)
 //	{
-//		//ÀÔ·ÂºÎ
+//		//ì…ë ¥ë¶€
 //		scanf("%d %d %d", &D, &W, &K);
 //		for (int i = 1; i <= D; i++)
 //			for (int j = 1; j <= W; j++)
@@ -776,7 +776,7 @@
 
 
 //8:31~
-//Á¤´ä K=1 ÇÏµåÄÚµù
+//ì •ë‹µ K=1 í•˜ë“œì½”ë”©
 //#include <stdio.h>
 //#define min(a,b) (a>b)?(b):(a)
 //#define INF 0xffff
@@ -821,20 +821,20 @@
 //	int temp[MAXW];
 //	if (check(map, ttry) == 1) return;
 //	if (ans > ttry  && search <= D){
-//		DFS(map, ttry, search + 1); //ÅõÀÔx ´ÙÀ½ rowÈ®ÀÎ	
+//		DFS(map, ttry, search + 1); //íˆ¬ì…x ë‹¤ìŒ rowí™•ì¸	
 //		for (int j = 1; j <= W; j++){
-//			temp[j] = map[search][j];//±âÁ¸¸ÊÀúÀå
-//			map[search][j] = ABrow[0][j];//A¾àÇ° ÅõÀÔÁØºñ
+//			temp[j] = map[search][j];//ê¸°ì¡´ë§µì €ì¥
+//			map[search][j] = ABrow[0][j];//Aì•½í’ˆ íˆ¬ì…ì¤€ë¹„
 //		}
 //		DFS(map, ttry + 1, search + 1);
 //
 //		for (int j = 1; j <= W; j++){
-//			map[search][j] = ABrow[1][j];//B¾àÇ° ÅõÀÔÁØºñ
+//			map[search][j] = ABrow[1][j];//Bì•½í’ˆ íˆ¬ì…ì¤€ë¹„
 //		}
 //		DFS(map, ttry + 1, search + 1);
 //
 //		for (int j = 1; j <= W; j++)
-//			map[search][j] = temp[j];//¿ø»óº¹±¸
+//			map[search][j] = temp[j];//ì›ìƒë³µêµ¬
 //	}
 //	else return;
 //}
@@ -848,7 +848,7 @@
 //
 //	for (int testcase = 1; testcase <= T; ++testcase)
 //	{
-//		//ÀÔ·ÂºÎ
+//		//ì…ë ¥ë¶€
 //		scanf("%d %d %d", &D, &W, &K);
 //		for (int i = 1; i <= D; i++)
 //			for (int j = 1; j <= W; j++)
@@ -866,8 +866,8 @@
 //}
 
 
-//9½Ã~
-//KÁ¶°Ç ÀçÈ®ÀÎ
+//9ì‹œ~
+//Kì¡°ê±´ ì¬í™•ì¸
 #include <stdio.h>
 #define min(a,b) (a>b)?(b):(a)
 #define INF 0xffff
@@ -882,7 +882,7 @@ int map[MAXD][MAXW] = { 0 };
 
 int check(int map[][MAXW], int ttry){
 	cnt = 1;
-	ok = 0;////////////////K=1ÀÎ°æ¿ì ÁÖÀÇ!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+	ok = 0;////////////////K=1ì¸ê²½ìš° ì£¼ì˜!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 	for (int i = 1; i <= W; i++){
 		cnt = 1;
 		for (int j = 2; j <= D; j++){
@@ -907,20 +907,20 @@ void DFS(int map[][MAXW], int ttry, int search){
 	int temp[MAXW];
 	if (check(map, ttry) == 1) return;
 	if (ans > ttry  && search<=D){		
-				DFS(map, ttry, search + 1); //ÅõÀÔx ´ÙÀ½ rowÈ®ÀÎ	
+				DFS(map, ttry, search + 1); //íˆ¬ì…x ë‹¤ìŒ rowí™•ì¸	
 				for (int j = 1; j <= W; j++){
-					temp[j] = map[search][j];//±âÁ¸¸ÊÀúÀå
-					map[search][j] = ABrow[0][j];//A¾àÇ° ÅõÀÔÁØºñ
+					temp[j] = map[search][j];//ê¸°ì¡´ë§µì €ì¥
+					map[search][j] = ABrow[0][j];//Aì•½í’ˆ íˆ¬ì…ì¤€ë¹„
 				}
 				DFS(map, ttry + 1, search + 1);
 
 				for (int j = 1; j <= W; j++){
-					map[search][j] = ABrow[1][j];//B¾àÇ° ÅõÀÔÁØºñ
+					map[search][j] = ABrow[1][j];//Bì•½í’ˆ íˆ¬ì…ì¤€ë¹„
 				}
 				DFS(map, ttry + 1, search + 1);
 
 				for (int j = 1; j <= W; j++)
-					map[search][j] = temp[j];//¿ø»óº¹±¸
+					map[search][j] = temp[j];//ì›ìƒë³µêµ¬
 	}
 	else return;
 }
@@ -934,7 +934,7 @@ int main(void)
 
 	for (int testcase = 1; testcase <= T; ++testcase)
 	{
-		//ÀÔ·ÂºÎ
+		//ì…ë ¥ë¶€
 		scanf("%d %d %d", &D, &W, &K);
 		for (int i = 1; i <= D; i++)
 			for (int j = 1; j <= W; j++)
