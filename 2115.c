@@ -1,5 +1,5 @@
 //18.4.12 pass
-//Á¶ÇÕÃÖÀûÈ­ -> ºñÆ®¸¶½ºÅ·À¸·Î ÀüÃ¼ Å½»ö
+//ì¡°í•©ìµœì í™” -> ë¹„íŠ¸ë§ˆìŠ¤í‚¹ìœ¼ë¡œ ì „ì²´ íƒìƒ‰
 #include <stdio.h>
 #define MAXN 10+1
 #define MAXM 5+1
@@ -10,15 +10,15 @@ int N, M, C;
 int map[MAXN][MAXN];
 int visit[MAXN][MAXN];
 
-int cal(int r, int c){//Á¶ÇÕÃÖÀûÈ­ ÁÖ¾îÁø ¹úÅëµé Áß¿¡ ÃÖ´ë ¼öÀÍ È®ÀÎ
+int cal(int r, int c){//ì¡°í•©ìµœì í™” ì£¼ì–´ì§„ ë²Œí†µë“¤ ì¤‘ì— ìµœëŒ€ ìˆ˜ìµ í™•ì¸
 	int Array[MAXN];
 	int tempsum = 0;
 	int tempsquaresum = 0;
 	int gain = 0;
-	for (int i = 0; i < M; i++)//È®ÀÎ ´ë»ó array¸¸µé±â	
+	for (int i = 0; i < M; i++)//í™•ì¸ ëŒ€ìƒ arrayë§Œë“¤ê¸°	
 		Array[i] = map[r][c + i];
 	
-	for (int i = 0; i <= ((1 << M) - 1); i++){//Á¶ÇÕ °æ¿ìÀÇ ¼ö È®ÀÎ
+	for (int i = 0; i <= ((1 << M) - 1); i++){//ì¡°í•© ê²½ìš°ì˜ ìˆ˜ í™•ì¸
 		tempsum = 0;
 		tempsquaresum = 0;
 		for (int j = 0; j < M; j++){
@@ -37,12 +37,12 @@ int cal(int r, int c){//Á¶ÇÕÃÖÀûÈ­ ÁÖ¾îÁø ¹úÅëµé Áß¿¡ ÃÖ´ë ¼öÀÍ È®ÀÎ
 	return gain;
 }
 
-int check(int visit[][MAXN]){//ÀÏ²ÛB °¡´ÉÇÑ °æ¿ì Áß ÃÖ´ë ÀÌÀÍ È®ÀÎ
+int check(int visit[][MAXN]){//ì¼ê¾¼B ê°€ëŠ¥í•œ ê²½ìš° ì¤‘ ìµœëŒ€ ì´ìµ í™•ì¸
 	int gain = 0;
 	int tempgain = 0;
 	for (int i = 1; i <= N; i++)//row
 		for (int j = 1; j <= N - M + 1; j++){//col
-			if (!visit[i][j] && !visit[i][j + M - 1]){//visitÈ®ÀÎÇØ¼­ °¡´ÉÀ§Ä¡ ÆÇ´Ü
+			if (!visit[i][j] && !visit[i][j + M - 1]){//visití™•ì¸í•´ì„œ ê°€ëŠ¥ìœ„ì¹˜ íŒë‹¨
 				tempgain = cal(i, j);
 				gain = MAX(gain, tempgain);
 			}				
@@ -51,19 +51,19 @@ int check(int visit[][MAXN]){//ÀÏ²ÛB °¡´ÉÇÑ °æ¿ì Áß ÃÖ´ë ÀÌÀÍ È®ÀÎ
 }
 
 void solve(){
-	//A¼±ÅÃ
+	//Aì„ íƒ
 	int gainA, gainB;
 
 	for (int i = 1; i <= N; i++)
 		for (int j = 1; j <= N - M + 1; j++){
 			for (int k = j; k <= j + M - 1; k++)
-				visit[i][k] = 1;//visit Ã¼Å© ÈÄ ÁøÇà
+				visit[i][k] = 1;//visit ì²´í¬ í›„ ì§„í–‰
 			
 			gainA = cal(i, j);			
 			gainB = check(visit);
 			ans = MAX(ans, gainA + gainB);
 			for (int k = j; k <= j + M - 1; k++)
-				visit[i][k] = 0;//visit ¿ø»óº¹±¸
+				visit[i][k] = 0;//visit ì›ìƒë³µêµ¬
 		}
 }
 
@@ -93,13 +93,13 @@ int main(void)
 	return 0;
 }
 
-//´Ù¸¥»ç¶÷ DP ÄÚµå
+//ë‹¤ë¥¸ì‚¬ëŒ DP ì½”ë“œ
 /*
 #include <stdio.h>
 
 int n, m, c;
 int map[12][12];
-int dp[12][12]; // ²ÜÀÇ ÃÖ´ë°ª ÀúÀå
+int dp[12][12]; // ê¿€ì˜ ìµœëŒ€ê°’ ì €ì¥
 
 void findMax(int x, int y) {
 	int cnt = 0;
@@ -148,7 +148,7 @@ int main() {
 
 		init();
 
-		// dp¿¡ ´Ù ÀúÀå
+		// dpì— ë‹¤ ì €ì¥
 		for (int i = 0; i < n; i++) {
 			for (int j = 0; j <= n - m; j++) {
 				findMax(i, j);
