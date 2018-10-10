@@ -5,7 +5,7 @@
 long long N;
 int M;
 int select[MAXM];
-//0¹øºÎÅÍ M-1¹ø »óÇ°
+//0번부터 M-1번 상품
 typedef struct{
 	long long price;
 	int good;
@@ -33,17 +33,15 @@ void solve(){
 				product[j].select = 1;
 			}
 		}
-
 		if (temppricesum <= N){			
 			if (ans < tempgoodsum){
 				for (int j = 0; j < M; j++){
 					selproduct[j].select = 0;
 					if (product[j].select) selproduct[j].select = 1;					
 				}
-				ans = tempgoodsum;
+				ans = MAX(ans, tempgoodsum);
 			}
 		}
-		else continue;
 	}
 }
 
@@ -51,7 +49,7 @@ int main(void)
 {
 	int T;
 
-	freopen("sample_input.txt", "r", stdin);
+	//freopen("sample_input.txt", "r", stdin);
 	setbuf(stdout, NULL);
 	scanf("%d", &T);
 
